@@ -1,19 +1,22 @@
-import { GridItem, Box, Grid, Link, Icon } from "@chakra-ui/react"
+import { GridItem, Box, Grid, Link, Icon, Separator } from "@chakra-ui/react"
 import { IoLogoNoSmoking } from "react-icons/io5";
 import { PiSignInFill } from "react-icons/pi";
+import { Outlet } from 'react-router-dom';
 
-function Header() {
+
+function NavBar() {
     
     return (
-        <Box
-            display={'flex'}
-            fontWeight={'bold'}
-            maxWidth={'1280px'}
-            margin={'15px 0 10px 0'}
-            justifySelf={'center'}
-            alignItems={'center'}
-        >
-            <Grid
+    <>
+        <div className="nav-wrap">
+            <Box
+                display={'flex'}
+                alignSelf={'center'}    
+                fontWeight={'bold'}
+                maxWidth={'1280px'}
+                margin={'10px 0 10px 0'}
+             >
+                 <Grid
                 templateColumns='repeat(6, auto)'
                 justifyContent={'center'}
                 gap={'50px'}
@@ -29,7 +32,7 @@ function Header() {
                 <GridItem >
                     <Link
                         variant="plain"
-                        href="#"
+                        href="/"
                         color='teal'
                         fontSize='20px'
                     >
@@ -39,7 +42,7 @@ function Header() {
                 <GridItem>
                     <Link
                         variant="plain"
-                        href="#"
+                        href="/news"
                         color='teal'
                         fontSize='20px'
                     >
@@ -49,7 +52,7 @@ function Header() {
                 <GridItem>
                     <Link
                         variant="plain"
-                        href="#"
+                        href="/mixology"
                         color='teal'
                         fontSize='20px'
                     >
@@ -59,7 +62,7 @@ function Header() {
                 <GridItem>
                     <Link
                         variant="plain"
-                        href="#"
+                        href="/learning"
                         color='teal'
                         fontSize='20px'
                     >
@@ -79,9 +82,13 @@ function Header() {
                         <PiSignInFill/>
                     </Link>
                 </GridItem>
-            </Grid>
-        </Box>
+                     </Grid>
+            </Box>
+            <Separator maxW={'1280px'} />
+        </div>
+        <Outlet/>
+    </>
   )
 }
 
-export default Header
+export default NavBar

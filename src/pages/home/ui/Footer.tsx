@@ -1,4 +1,3 @@
-import React from "react"
 import { Box, Text, Image } from "@chakra-ui/react";
 
 const Footer = () => {
@@ -16,13 +15,13 @@ const Footer = () => {
               w={'600px'}
               display={'grid'}
               gridTemplateColumns={'repeat(auto-fit, 100px)'}
-              justifyContent={'center'}
+              justifyContent={'space-around'}
               alignContent={'center'}
               marginBottom={'10px'}
           >
               <Image src={'/src/logo/KMTM.png'} alt="KMTM.logo"/>
               <Image src={'/src/logo/Trexa.png'} alt="Trexa.logo"/>
-              <Image src={'/src/logo/Murzilka.png'} alt="Murzilka.logo"/>
+              <Image src={'/src/logo/Murzilka.png'} alt="Murzilka.logo" />
           </Box>
     </Box>
   )

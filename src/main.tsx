@@ -1,15 +1,16 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from "react-dom/client";
 import './index.css'
-import App from './App.tsx'
-import { Provider } from "@/components/ui/provider"
-import '@fontsource-variable/comfortaa/index.css';
+import { Provider } from "./components/ui/provider"
+import Router from './app/routes/Router';
+// import '@fontsource-variable/comfortaa/index.css';
 
+const root = document.getElementById('root')
 
-createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(root!).render(
     <StrictMode>
         <Provider>
-            <App/>
+                <Router/>
         </Provider>
-  </StrictMode>,
+  </StrictMode>
 )
